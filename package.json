@@ -11,6 +11,11 @@
   "scripts": {
     "start": "mdx-deck --no-open examples/deck.mdx"
   },
+  "keywords": [
+    "mdx-deck",
+    "mdx",
+    "theme"
+  ],
   "devDependencies": {
     "mdx-deck": "^2.3.2"
   },
