@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import colors from '../colors'
+import Layouts from '../layouts'
 import ProgressBar from './ProgressBar'
 import GithubIcon from './GithubIcon'
 
@@ -31,20 +32,24 @@ const StyledLayout = styled.main`
   background-color: ${colors.bg};
 `
 
-const Provider = props => (
-  <StyledLayout>
-    {props.children}
-    <ProgressBar percent={Math.floor((100 / (props.slides.length - 1)) * props.index)} />
-    <StyledIcon
-      href={props.logoUrl || 'https://github.com/josefaidt/mdx-deck-theme-garlic'}
-      target="_blank"
-    >
-      {props.logo ? <props.logo /> : <GithubIcon color={colors.default} />}
-    </StyledIcon>
-    <StyledTag href={props.authorUrl || 'https://josefaidt.me/'} target="_blank">
-      {props.author || 'josef.aidt'}
-    </StyledTag>
-  </StyledLayout>
-)
+const Provider = props => {
+  const SlideLayout = Layouts.hasOwnProperty(props.slideLayout) ? Layouts[props.slideLayout] : null
+  console.log(SlideLayout)
+  return (
+    <StyledLayout>
+      {SlideLayout ? <SlideLayout>{props.children}</SlideLayout> : <>{props.children}</>}
+      <ProgressBar percent={Math.floor((100 / (props.slides.length - 1)) * props.index)} />
+      <StyledIcon
+        href={props.logoUrl || 'https://github.com/josefaidt/mdx-deck-theme-garlic'}
+        target="_blank"
+      >
+        {props.logo ? <props.logo /> : <GithubIcon color={colors.default} />}
+      </StyledIcon>
+      <StyledTag href={props.authorUrl || 'https://josefaidt.me/'} target="_blank">
+        {props.author || 'josef.aidt'}
+      </StyledTag>
+    </StyledLayout>
+  )
+}
 
 export default Provider
