@@ -27,9 +27,9 @@ export default {
 }
 ```
 
-### Layout Components
+## Layout Components
 
-#### Contour
+### Contour
 
 ```markdown
 import { Contour } from 'mdx-deck-theme-garlic'
