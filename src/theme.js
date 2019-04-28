@@ -12,7 +12,7 @@ export default {
     code: colors.red,
   },
   a: {
-    'text-decoration': 'none',
+    // 'text-decoration': 'none',
   },
   Provider,
 }

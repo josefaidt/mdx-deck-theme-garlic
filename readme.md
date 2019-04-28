@@ -31,6 +31,17 @@ export default {
 
 ### Contour
 
+#### Props
+
+```js
+Contour.defaultProps = {
+  invert: false,
+  contentWidth: 70, // out of 100
+}
+```
+
+#### Example
+
 ```markdown
 import { Contour } from 'mdx-deck-theme-garlic'
 
@@ -42,3 +53,65 @@ some text
 
 </Contour>
 ```
+
+### Contour Invert
+
+<details>
+<summary>Props</summary>
+
+```js
+Contour.props = {
+  invert: true,
+  contentWidth: 70, // default
+}
+```
+
+</details>
+
+<details>
+<summary>Example</summary>
+
+```markdown
+import { Contour } from 'mdx-deck-theme-garlic'
+
+<Contour invert>
+
+# Title
+
+some text
+
+</Contour>
+```
+
+</details>
+
+### Contour with Custom Width
+
+<details>
+<summary>Props</summary>
+
+```js
+Contour.props = {
+  invert: false, // default
+  contentWidth: 90,
+}
+```
+
+</details>
+
+<details>
+<summary>Example</summary>
+
+```markdown
+import { Contour } from 'mdx-deck-theme-garlic'
+
+<Contour contentWidth={90}>
+
+# Title
+
+some text
+
+</Contour>
+```
+
+</details>

@@ -1,24 +1,42 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import PropTypes from 'prop-types'
+import { generateViewWidth } from './utils'
 
 const StyledLayout = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 50vw);
-  grid-template-rows: repeat(1, 100vh);
+  grid-template-columns: ${props => generateViewWidth(props.contentWidth)};
+  grid-template-rows: 100vh;
   align-items: center;
   grid-areas: '
     left right
   ';
   overflow: hidden;
 
-  pre,
-  code {
-    font-size: 0.5em;
-  }
-
   .content {
     /* height: 100%; */
     padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &.inverted {
+    grid-template-columns: ${props => generateViewWidth(props.contentWidth, true)};
+  }
+  &.inverted > .textured {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  &.inverted > .content {
+    grid-column: 1;
+    grid-row: 1;
+    align-items: flex-end;
+  }
+
+  pre,
+  code {
+    font-size: 0.5em;
   }
 
   .textured {
@@ -29,18 +47,21 @@ const StyledLayout = styled.div`
 `
 
 // eslint-disable-next-line react/display-name
-export default props => (
-  <StyledLayout>
-    {!props.invert ? (
-      <>
-        <div className="textured" />
-        <div className="content">{props.children}</div>
-      </>
-    ) : (
-      <>
-        <div className="content">{props.children}</div>
-        <div className="textured" />
-      </>
-    )}
+const Contour = props => (
+  <StyledLayout className={props.invert ? 'inverted' : ''} contentWidth={props.contentWidth}>
+    <div className="textured" />
+    <div className="content">{props.children}</div>
   </StyledLayout>
 )
+
+Contour.propTypes = {
+  invert: PropTypes.bool,
+  contentWidth: PropTypes.number,
+}
+
+Contour.defaultProps = {
+  invert: false,
+  contentWidth: 70,
+}
+
+export default Contour
