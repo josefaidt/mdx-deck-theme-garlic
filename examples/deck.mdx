@@ -1,6 +1,6 @@
-import theme from '../index'
 import { Head, Appear } from '@mdx-deck/components'
 import { Invert } from 'mdx-deck/layouts'
+import theme, { Contour } from '../index'
 
 export const themes = [
   theme,
@@ -17,20 +17,38 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 
 ---
 
-```jsx
-<CodeSnippet prop="some-value" />
-```
+<Contour>
+
+  # Contour
+
+  ```jsx
+  import { Contour } from 'mdx-deck-theme-garlic'
+
+  <Contour>
+    # This is a slide
+  </Contour>
+  ```
+
+</Contour>
 
 ---
 
-# Appear
+<Contour invert>
 
-<Appear>
-  <div>now</div>
-  <div>you</div>
-  <div>see me</div>
-</Appear>
+  # Contour Invert
+
+  ```jsx
+  import { Contour } from 'mdx-deck-theme-garlic'
+
+  <Contour invert>
+    # This is a slide
+  </Contour>
+  ```
+
+</Contour>
 
 ---
 
 # The end
+
+get started [today](https://npmjs.com/packages/mdx-deck-theme-garlic)

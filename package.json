@@ -9,13 +9,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "mdx-deck --no-open examples/deck.mdx"
+    "start": "mdx-deck --no-open examples/deck.mdx",
+    "now-build": "mdx-deck build -d public examples/deck.mdx"
   },
   "keywords": [
     "mdx-deck",
     "mdx",
     "theme"
   ],
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10"
+  },
   "devDependencies": {
     "mdx-deck": "^2.3.2"
   },

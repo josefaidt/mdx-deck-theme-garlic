@@ -7,18 +7,18 @@ const StyledProgress = styled.div`
   position: fixed;
   display: flex;
   bottom: 0;
-  margin: 13px 0;
+  margin: 10px 0;
   width: 100%;
   justify-content: center;
   div {
-    height: 1.5rem; /* Can be anything */
+    height: 1.2rem; /* Can be anything */
     position: relative;
     width: 60vw;
     background: ${opacity(colors.default, 30)};
     filter: brightness(120%);
     span {
       display: block;
-      height: 1.5rem;
+      height: 1.2rem;
       width: ${props => (props.percent ? `${props.percent}%` : '0%')};
       background-color: ${colors.red};
       position: relative;
