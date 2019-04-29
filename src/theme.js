@@ -11,6 +11,9 @@ export default {
     link: colors.red,
     code: colors.red,
   },
+  h1: {
+    marginTop: 0,
+  },
   a: {
     // 'text-decoration': 'none',
   },
