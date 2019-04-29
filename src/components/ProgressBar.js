@@ -11,14 +11,14 @@ const StyledProgress = styled.div`
   width: 100%;
   justify-content: center;
   div {
-    height: 1rem; /* Can be anything */
+    height: ${props => props.barHeight};
     position: relative;
     width: 60vw;
     background: ${opacity(colors.default, 30)};
     filter: brightness(120%);
     span {
       display: block;
-      height: 1rem;
+      height: ${props => props.barHeight};
       width: ${props => (props.percent ? `${props.percent}%` : '0%')};
       background-color: ${colors.red};
       position: relative;
@@ -27,12 +27,16 @@ const StyledProgress = styled.div`
   }
 `
 
-const ProgressBar = ({ percent }) => (
-  <StyledProgress percent={percent}>
+const ProgressBar = props => (
+  <StyledProgress barHeight={props.barHeight} percent={props.percent}>
     <div>
       <span />
     </div>
   </StyledProgress>
 )
+
+ProgressBar.defaultProps = {
+  barHeight: '0.8rem',
+}
 
 export default ProgressBar

@@ -27,6 +27,14 @@ export default {
 }
 ```
 
+Import into your `deck.mdx` file:
+
+```mdx
+export { default as theme } from './theme'
+
+# My first slide
+```
+
 ## Layout Components
 
 ### Contour

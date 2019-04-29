@@ -47,4 +47,11 @@ const Provider = props => (
   </StyledLayout>
 )
 
+Provider.defaultProps = {
+  logoUrl: '',
+  logo: '',
+  author: '',
+  authorUrl: '',
+}
+
 export default Provider

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { generateViewWidth } from './utils'
+import { generateViewWidth, generateViewHeight } from './utils'
 
 const StyledLayout = styled.div`
   display: grid;
@@ -34,9 +34,24 @@ const StyledLayout = styled.div`
     align-items: flex-end;
   }
 
-  pre,
-  code {
-    font-size: 0.5em;
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 100vw;
+    grid-template-rows: ${props => generateViewHeight(props.contentWidth)};
+    .content {
+      padding: 1rem 0.5rem;
+    }
+    &.inverted {
+      grid-template-columns: ${props => generateViewHeight(props.contentWidth, true)};
+    }
+    &.inverted > .textured {
+      grid-row: 2;
+      grid-column: 1;
+    }
+    &.inverted > .content {
+      grid-row: 1;
+      grid-column: 1;
+      align-items: flex-end;
+    }
   }
 
   .textured {

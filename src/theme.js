@@ -10,12 +10,17 @@ export default {
     background: colors.bg,
     link: colors.red,
     code: colors.red,
+    codeBackground: colors.bg,
   },
   h1: {
     marginTop: 0,
+    fontSize: '1.8em',
   },
-  a: {
-    // 'text-decoration': 'none',
+  h2: {
+    marginTop: 0,
+  },
+  h3: {
+    marginTop: 0,
   },
   Provider,
 }
