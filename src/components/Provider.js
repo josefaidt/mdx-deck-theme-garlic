@@ -19,21 +19,24 @@ const StyledLayout = styled.main`
   background-color: ${colors.bg};
 `
 
-const Provider = props => (
-  <StyledLayout>
-    {props.children}
-    <ProgressBar percent={Math.floor((100 / (props.slides.length - 1)) * props.index)} />
-    <StyledIcon
-      href={props.logoUrl || 'https://github.com/josefaidt/mdx-deck-theme-garlic'}
-      target="_blank"
-    >
-      {props.logo ? <props.logo /> : <GithubIcon color={props.colors.accent} />}
-    </StyledIcon>
-    <StyledTag href={props.authorUrl || 'https://josefaidt.me/'} target="_blank">
-      {props.author || 'josef.aidt'}
-    </StyledTag>
-  </StyledLayout>
-)
+const Provider = props => {
+  return (
+    <StyledLayout>
+      {props.children}
+      <ProgressBar percent={Math.floor((100 / (props.slides.length - 1)) * props.index)} />
+      <StyledIcon
+        href={props.logoUrl || 'https://github.com/josefaidt/mdx-deck-theme-garlic'}
+        target="_blank"
+        fillColor={colors.default}
+      >
+        {props.logo ? <props.logo /> : <GithubIcon />}
+      </StyledIcon>
+      <StyledTag href={props.authorUrl || 'https://josefaidt.me/'} target="_blank">
+        {props.author || 'josef.aidt'}
+      </StyledTag>
+    </StyledLayout>
+  )
+}
 
 Provider.defaultProps = {
   logoUrl: '',

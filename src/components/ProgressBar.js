@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from '@emotion/styled'
-import { ThemeContext } from '../context'
+import colors from '../colors'
+import { opacity } from '../util'
 
 const StyledProgress = styled.div`
   position: fixed;
@@ -13,13 +14,14 @@ const StyledProgress = styled.div`
     height: ${props => props.barHeight};
     position: relative;
     width: 60vw;
-    background: ${context => context.opacity(context.colors.default, 30)};
+    background: ${opacity(colors.default, 30)};
     filter: brightness(120%);
     span {
       display: block;
       height: ${props => props.barHeight};
       width: ${props => (props.percent ? `${props.percent}%` : '0%')};
-      background-color: ${context => context.colors.accent};
+      background-color: ${colors.accent};
+      opacity: 1;
       position: relative;
       overflow: hidden;
     }
@@ -27,9 +29,8 @@ const StyledProgress = styled.div`
 `
 
 const ProgressBar = props => {
-  const context = useContext(ThemeContext)
   return (
-    <StyledProgress {...props} {...context}>
+    <StyledProgress {...props}>
       <div>
         <span />
       </div>

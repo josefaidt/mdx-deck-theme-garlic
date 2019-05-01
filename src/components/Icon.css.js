@@ -5,11 +5,11 @@ const StyledIcon = styled.a`
   left: 0;
   top: 0;
   margin: 1rem;
-  color: ${props => props.fill};
+  color: ${props => props.fillColor};
 
   svg {
-    fill: ${props => props.fill};
-    stroke: ${props => props.fill};
+    fill: ${props => props.fillColor};
+    stroke: ${props => props.fillColor};
   }
 `
 
