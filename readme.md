@@ -56,7 +56,7 @@ Provided by the `ThemeContext`:
 
 - colors
 - color utilities (currently only `opacity`)
-  - `opacity(color: HexString!, opacityPercent: Int!)`
+  - `context.util.opacity(color: HexString!, opacityPercent: Int!)`
 
 #### Starting Colors
 
