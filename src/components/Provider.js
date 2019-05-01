@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import colors from '../colors'
 import ProgressBar from './ProgressBar'
 import GithubIcon from './GithubIcon'
+import StyledIcon from './Icon.css'
 
 const StyledTag = styled.a`
   position: fixed;
@@ -12,19 +13,6 @@ const StyledTag = styled.a`
   font-size: 1.5rem;
   color: ${colors.default};
   text-decoration: none;
-`
-
-const StyledIcon = styled.a`
-  position: fixed;
-  left: 0;
-  top: 0;
-  margin: 1rem;
-  color: ${colors.default};
-
-  svg {
-    fill: ${colors.default};
-    stroke: ${colors.default};
-  }
 `
 
 const StyledLayout = styled.main`
@@ -39,7 +27,7 @@ const Provider = props => (
       href={props.logoUrl || 'https://github.com/josefaidt/mdx-deck-theme-garlic'}
       target="_blank"
     >
-      {props.logo ? <props.logo /> : <GithubIcon color={colors.default} />}
+      {props.logo ? <props.logo /> : <GithubIcon color={props.colors.accent} />}
     </StyledIcon>
     <StyledTag href={props.authorUrl || 'https://josefaidt.me/'} target="_blank">
       {props.author || 'josef.aidt'}

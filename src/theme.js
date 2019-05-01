@@ -1,5 +1,8 @@
+import React from 'react'
 import Provider from './components/Provider'
 import colors from './colors'
+
+const WrappedProvider = props => <Provider {...props} />
 
 export default {
   googleFont: 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans',
@@ -8,8 +11,8 @@ export default {
   colors: {
     text: colors.default,
     background: colors.bg,
-    link: colors.red,
-    code: colors.red,
+    link: colors.accent,
+    code: colors.accent,
     codeBackground: colors.bg,
   },
   h1: {
@@ -22,5 +25,5 @@ export default {
   h3: {
     marginTop: 0,
   },
-  Provider,
+  Provider: WrappedProvider,
 }

@@ -16,7 +16,7 @@ const config = {
   logo: () => <svg></svg>, // your SVG logo React component
   logoUrl: 'https://google.com', // link for logo wrapper
   author: 'josef.aidt', // author name
-  authorUrl: 'https://josefaidt.me' // author name
+  authorUrl: 'https://josefaidt.me' // author url
 }
 
 const wrapper = props => <Provider {...config} {...props} />
@@ -33,6 +33,42 @@ Import into your `deck.mdx` file:
 export { default as theme } from './theme'
 
 # My first slide
+```
+
+### Theme Context
+
+Access the theme color values via `ThemeContext`:
+
+```js
+// my-component
+import React, { useContext } from 'react'
+import { ThemeContext } from 'mdx-deck-theme-garlic'
+
+const MyComponent = props => {
+  const context = useContext(ThemeContext)
+  return (
+    <h1 style={{ color: context.colors.default }}></h1>
+  )
+}
+```
+
+Provided by the `ThemeContext`:
+
+- colors
+- color utilities (currently only `opacity`)
+  - `opacity(color: HexString!, opacityPercent: Int!)`
+
+#### Starting Colors
+
+In case you would like to roll your own ThemeContext and wrap the provided Provider, styles for the built-in components reference the following Object keys
+
+```js
+// colors.js
+export default {
+  default: '#585159',
+  accent: '#A8595E',
+  bg: '#F5F5EE',
+}
 ```
 
 ## Layout Components
