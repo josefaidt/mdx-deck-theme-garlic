@@ -76,7 +76,7 @@ Contour.propTypes = {
 
 Contour.defaultProps = {
   invert: false,
-  contentWidth: 75,
+  contentWidth: 78,
 }
 
 export default Contour
