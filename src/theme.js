@@ -25,5 +25,11 @@ export default {
   h3: {
     marginTop: 0,
   },
+  code: {
+    fontSize: '0.7em',
+  },
+  pre: {
+    fontSize: '0.7em',
+  },
   Provider: WrappedProvider,
 }
