@@ -1,6 +1,6 @@
 import { Head, Appear } from '@mdx-deck/components'
 import { Invert } from 'mdx-deck/layouts'
-import theme, { Contour } from '../index'
+import theme, { Contour, CodeSandbox, Frame } from '../index'
 
 export const themes = [
   theme,
@@ -19,17 +19,17 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 
 <Contour>
 
+# Contour
+
+```jsx
+import { Contour } from 'mdx-deck-theme-garlic'
+
+<Contour>
+
   # Contour
-
-  ```jsx
-  import { Contour } from 'mdx-deck-theme-garlic'
-
-  <Contour>
-
-    # Contour
-    
-  </Contour>
-  ```
+  
+</Contour>
+```
 
 </Contour>
 
@@ -37,17 +37,17 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 
 <Contour invert>
 
+# Contour Invert
+
+```jsx
+import { Contour } from 'mdx-deck-theme-garlic'
+
+<Contour invert>
+
   # Contour Invert
 
-  ```jsx
-  import { Contour } from 'mdx-deck-theme-garlic'
-
-  <Contour invert>
-
-    # Contour Invert
-
-  </Contour>
-  ```
+</Contour>
+```
 
 </Contour>
 
@@ -55,22 +55,60 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 
 <Contour contentWidth={90}>
 
+# Contour Custom Width
+
+```jsx
+import { Contour } from 'mdx-deck-theme-garlic'
+
+<Contour contentWidth={90}>
+
   # Contour Custom Width
 
-  ```jsx
-  import { Contour } from 'mdx-deck-theme-garlic'
-
-  <Contour contentWidth={90}>
-
-    # Contour Custom Width
-
-  </Contour>
-  ```
+</Contour>
+```
 
 </Contour>
 
 ---
 
+<Contour>
+
+# CodeSandbox iFrame
+
+```js
+import { CodeSandbox } from 'mdx-deck-theme-garlic'
+
+<CodeSandbox 
+  url="https://codesandbox.io/embed/new"
+/>
+```
+
+</Contour>
+
+---
+
+<CodeSandbox />
+
+---
+
+<Contour>
+
+# Frame
+
+```js
+import { Frame } from 'mdx-deck-theme-garlic'
+
+<Frame loadingText="Loading..." />
+```
+
+</Contour>
+
+---
+
+<Frame loadingText="Loading..." />
+
+---
+
 # The end
 
-get started [today](https://npmjs.com/packages/mdx-deck-theme-garlic)
+get started [today](https://www.npmjs.com/package/mdx-deck-theme-garlic)

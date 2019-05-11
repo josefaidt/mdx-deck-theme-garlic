@@ -2,7 +2,7 @@
 
 [![NPM Package Version](https://img.shields.io/npm/v/mdx-deck-theme-garlic.svg?style=flat-square)](https://www.npmjs.com/package/mdx-deck-theme-garlic)
 
-Visit the [live demo](https://mdx-deck-theme-garlic.josefaidt.now.sh).
+Visit the [live demo](https://mdx-deck-theme-garlic.josefaidt.now.sh). SVG Designs made possible thanks to [Hero Patterns by Steve Schoger](https://www.heropatterns.com/).
 
 ## Getting Started
 
@@ -159,3 +159,47 @@ some text
 ```
 
 </details>
+
+## Content Components
+
+### CodeSandbox
+
+**Props**
+
+```js
+CodeSandbox.defaultProps = {
+  url: 'https://codesandbox.io/embed/new?codemirror=1',
+}
+```
+
+**Example**
+
+```markdown
+import { CodeSandbox } from 'mdx-deck-theme-garlic'
+
+<CodeSandbox
+  url="https://codesandbox.io/embed/new?codemirror=1"
+/>
+```
+
+### Frame
+
+**Props**
+
+```js
+Frame.defaultProps = {
+  url: 'https://yarnpkg.com/en/package/mdx-deck-theme-garlic',
+  loadingText: 'Loading...',
+}
+```
+
+**Example**
+
+```markdown
+import { Frame } from 'mdx-deck-theme-garlic'
+
+<Frame
+  url="https://yarnpkg.com/en/package/mdx-deck-theme-garlic"
+  loadingText="Loading..."
+/>
+```
