@@ -2,7 +2,7 @@
 
 [![NPM Package Version](https://img.shields.io/npm/v/mdx-deck-theme-garlic.svg?style=flat-square)](https://www.npmjs.com/package/mdx-deck-theme-garlic)
 
-Visit the [live demo](https://mdx-deck-theme-garlic.josefaidt.now.sh).
+Visit the [live demo](https://mdx-deck-theme-garlic.josefaidt.now.sh). SVG Designs made possible thanks to [Hero Patterns by Steve Schoger](https://www.heropatterns.com/).
 
 ## Getting Started
 
