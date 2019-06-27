@@ -31,5 +31,8 @@ export default {
   pre: {
     fontSize: '0.7em',
   },
+  quote: {
+    fontStyle: 'italic',
+  },
   Provider: WrappedProvider,
 }

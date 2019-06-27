@@ -18,13 +18,13 @@
     "theme"
   ],
   "dependencies": {
-    "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.10"
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14"
   },
   "devDependencies": {
-    "mdx-deck": "^2.3.2"
+    "mdx-deck": "^2.4.0"
   },
   "peerDependencies": {
-    "mdx-deck": "^2.3.2"
+    "mdx-deck": "^2.4.0"
   }
 }

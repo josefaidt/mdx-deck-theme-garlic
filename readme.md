@@ -35,30 +35,7 @@ export { default as theme } from './theme'
 # My first slide
 ```
 
-### Theme Context
-
-Access the theme color values via `ThemeContext`:
-
-```js
-// my-component
-import React, { useContext } from 'react'
-import { ThemeContext } from 'mdx-deck-theme-garlic'
-
-const MyComponent = props => {
-  const context = useContext(ThemeContext)
-  return (
-    <h1 style={{ color: context.colors.default }}></h1>
-  )
-}
-```
-
-Provided by the `ThemeContext`:
-
-- colors
-- color utilities (currently only `opacity`)
-  - `context.util.opacity(color: HexString!, opacityPercent: Int!)`
-
-#### Starting Colors
+### Theme Colors
 
 In case you would like to roll your own ThemeContext and wrap the provided Provider, styles for the built-in components reference the following Object keys
 
