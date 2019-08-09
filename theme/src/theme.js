@@ -6,14 +6,14 @@ const WrappedProvider = props => <Provider {...props} />
 
 export default {
   googleFont: 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans',
-  font: 'IBM Plex Sans, sans-serif',
-  monospace: 'IBM Plex Mono, monospace',
+  fonts: {
+    body: 'IBM Plex Sans, sans-serif',
+    monospace: 'IBM Plex Mono, monospace',
+  },
   colors: {
     text: colors.default,
     background: colors.bg,
-    link: colors.accent,
-    code: colors.accent,
-    codeBackground: colors.bg,
+    primary: colors.accent,
   },
   h1: {
     marginTop: 0,
@@ -26,10 +26,11 @@ export default {
     marginTop: 0,
   },
   code: {
-    fontSize: '0.7em',
+    fontSize: '0.7rem',
+    color: 'primary'
   },
   pre: {
-    fontSize: '0.7em',
+    fontSize: '0.7rem',
   },
   quote: {
     fontStyle: 'italic',

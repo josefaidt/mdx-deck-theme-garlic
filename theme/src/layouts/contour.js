@@ -8,9 +8,7 @@ const StyledLayout = styled.div`
   grid-template-columns: ${props => generateViewWidth(props.contentWidth)};
   grid-template-rows: 100vh;
   align-items: center;
-  grid-areas: '
-    left right
-  ';
+  grid-areas: 'left right';
   overflow: hidden;
 
   .content {

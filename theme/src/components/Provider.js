@@ -20,10 +20,11 @@ const StyledLayout = styled.main`
 `
 
 const Provider = props => {
+  console.log(props)
   return (
     <StyledLayout>
       {props.children}
-      <ProgressBar percent={Math.floor((100 / (props.slides.length - 1)) * props.index)} />
+      {/* <ProgressBar percent={Math.floor((100 / (props.slides.length - 1)) * props.index)} /> */}
       <StyledIcon
         href={props.logoUrl || 'https://github.com/josefaidt/mdx-deck-theme-garlic'}
         target="_blank"
@@ -31,7 +32,7 @@ const Provider = props => {
       >
         {props.logo ? <props.logo /> : <GithubIcon />}
       </StyledIcon>
-      <StyledTag href={props.authorUrl || 'https://josefaidt.me/'} target="_blank">
+      <StyledTag href={props.authorUrl || 'https://josefaidt.dev/'} target="_blank">
         {props.author || 'josef.aidt'}
       </StyledTag>
     </StyledLayout>
