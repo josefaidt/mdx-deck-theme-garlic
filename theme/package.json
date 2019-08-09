@@ -15,7 +15,8 @@
   ],
   "dependencies": {
     "@emotion/core": "^10.0.15",
-    "@emotion/styled": "^10.0.15"
+    "@emotion/styled": "^10.0.15",
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "mdx-deck": "^3.0.9"

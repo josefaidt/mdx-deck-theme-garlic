@@ -6,6 +6,7 @@ const StyledIcon = styled.a`
   top: 0;
   margin: 1rem;
   color: ${props => props.fillColor};
+  z-index: 1;
 
   svg {
     fill: ${props => props.fillColor};

@@ -11,9 +11,9 @@ export default {
     monospace: 'IBM Plex Mono, monospace',
   },
   colors: {
-    text: colors.default,
-    background: colors.bg,
-    primary: colors.accent,
+    text: '#585159',
+    background: '#F5F5EE',
+    primary: '#A8595E',
   },
   h1: {
     marginTop: 0,
@@ -25,12 +25,12 @@ export default {
   h3: {
     marginTop: 0,
   },
-  code: {
-    fontSize: '0.7rem',
-    color: 'primary'
-  },
   pre: {
-    fontSize: '0.7rem',
+    fontSize: '0.7em',
+  },
+  code: {
+    fontSize: '0.7em',
+    color: 'primary',
   },
   quote: {
     fontStyle: 'italic',

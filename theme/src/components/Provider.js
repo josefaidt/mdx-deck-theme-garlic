@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import colors from '../colors'
+import PropTypes from 'prop-types'
+import { useThemeUI } from 'theme-ui'
+import { useDeck } from 'mdx-deck'
 import ProgressBar from './ProgressBar'
-import GithubIcon from './GithubIcon'
 import StyledIcon from './Icon.css'
 
 const StyledTag = styled.a`
@@ -10,40 +11,55 @@ const StyledTag = styled.a`
   right: 0;
   top: 0;
   margin: 1rem;
+  z-index: 1;
   font-size: 1.5rem;
-  color: ${colors.default};
+  color: ${({ theme }) => theme.colors.text || 'thistle'};
   text-decoration: none;
 `
 
 const StyledLayout = styled.main`
-  background-color: ${colors.bg};
+  font-family: ${({ theme }) => theme.fonts.body};
 `
 
 const Provider = props => {
-  console.log(props)
+  const { theme } = useThemeUI()
+  const deck = useDeck()
+  const { logo: Logo, logoUrl, author, authorUrl, children } = props
+  console.log(deck)
   return (
     <StyledLayout>
-      {props.children}
-      {/* <ProgressBar percent={Math.floor((100 / (props.slides.length - 1)) * props.index)} /> */}
-      <StyledIcon
-        href={props.logoUrl || 'https://github.com/josefaidt/mdx-deck-theme-garlic'}
-        target="_blank"
-        fillColor={colors.default}
-      >
-        {props.logo ? <props.logo /> : <GithubIcon />}
-      </StyledIcon>
-      <StyledTag href={props.authorUrl || 'https://josefaidt.dev/'} target="_blank">
-        {props.author || 'josef.aidt'}
-      </StyledTag>
+      {Logo && logoUrl ? (
+        <StyledIcon href={logoUrl} target="_blank" theme={theme}>
+          {Logo ? <Logo theme={theme} /> : null}
+        </StyledIcon>
+      ) : (
+        <h1>Hello World</h1>
+      )}
+      {author && authorUrl ? (
+        <StyledTag href={authorUrl} target="_blank" theme={theme}>
+          {author}
+        </StyledTag>
+      ) : (
+        <h1>Hello World</h1>
+      )}
+      {children}
+      <ProgressBar percent={Math.floor((100 / (deck.length - 1)) * deck.index)} />
     </StyledLayout>
   )
 }
 
+Provider.propTypes = {
+  logo: PropTypes.func,
+  logoUrl: PropTypes.string,
+  author: PropTypes.string,
+  authorUrl: PropTypes.string,
+}
+
 Provider.defaultProps = {
-  logoUrl: '',
-  logo: '',
-  author: '',
-  authorUrl: '',
+  logo: null,
+  logoUrl: null,
+  author: null,
+  authorUrl: null,
 }
 
 export default Provider
