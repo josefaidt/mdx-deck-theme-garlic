@@ -18,6 +18,14 @@ export const themes = [
 # My first slide
 ```
 
+### Available Shortcodes
+
+All custom components from this theme are exported as named below as well as provided via MDX shortcodes, meaning you can use these components without importing them.
+
+- [Contour](#Contour): layout component
+- [CodeSandbox](#CodeSandbox)
+- [Frame](#Frame)
+
 ### To use Logo and Author
 
 In your new mdx-deck project, create a `theme.js` file, create a config object with your values (values not provided will not be rendered, therefore you can optionally use either logo, author, or both) as shown below:
@@ -54,7 +62,7 @@ export { default as theme } from './theme'
 
 ### Contour
 
-#### Props
+Props
 
 ```js
 Contour.defaultProps = {
@@ -63,7 +71,7 @@ Contour.defaultProps = {
 }
 ```
 
-#### Example
+Example
 
 ```markdown
 <Contour>
@@ -137,15 +145,7 @@ some text
 
 ### CodeSandbox
 
-#### Props
-
-```js
-CodeSandbox.defaultProps = {
-  url: 'https://codesandbox.io/embed/new?codemirror=1',
-}
-```
-
-#### Example
+Example
 
 ```markdown
 <CodeSandbox
@@ -153,22 +153,30 @@ CodeSandbox.defaultProps = {
 />
 ```
 
-### Frame
-
-#### Props
+Props
 
 ```js
-Frame.defaultProps = {
-  url: 'https://yarnpkg.com/en/package/mdx-deck-theme-garlic',
-  loadingText: 'Loading...',
+CodeSandbox.defaultProps = {
+  url: 'https://codesandbox.io/embed/new?codemirror=1',
 }
 ```
 
-#### Example
+### Frame
+
+Example
 
 ```markdown
 <Frame
   url="https://yarnpkg.com/en/package/mdx-deck-theme-garlic"
   loadingText="Loading..."
 />
+```
+
+Props
+
+```js
+Frame.defaultProps = {
+  url: 'https://yarnpkg.com/en/package/mdx-deck-theme-garlic',
+  loadingText: 'Loading...',
+}
 ```
