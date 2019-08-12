@@ -34,7 +34,7 @@ const config = {
   authorUrl: 'https://josefaidt.dev/',
 }
 
-const wrapper = props => <Provider {...config} {...props} />
+const wrapper = props => <Provider {...props} {...config} />
 
 export default {
   ...theme,
@@ -66,8 +66,6 @@ Contour.defaultProps = {
 #### Example
 
 ```markdown
-import { Contour } from 'mdx-deck-theme-garlic'
-
 <Contour>
 
 # Title
@@ -95,8 +93,6 @@ Contour.props = {
 <summary>Example</summary>
 
 ```markdown
-import { Contour } from 'mdx-deck-theme-garlic'
-
 <Contour invert>
 
 # Title
@@ -126,8 +122,6 @@ Contour.props = {
 <summary>Example</summary>
 
 ```markdown
-import { Contour } from 'mdx-deck-theme-garlic'
-
 <Contour contentWidth={90}>
 
 # Title
@@ -143,7 +137,7 @@ some text
 
 ### CodeSandbox
 
-**Props**
+#### Props
 
 ```js
 CodeSandbox.defaultProps = {
@@ -151,11 +145,9 @@ CodeSandbox.defaultProps = {
 }
 ```
 
-**Example**
+#### Example
 
 ```markdown
-import { CodeSandbox } from 'mdx-deck-theme-garlic'
-
 <CodeSandbox
   url="https://codesandbox.io/embed/new?codemirror=1"
 />
@@ -163,7 +155,7 @@ import { CodeSandbox } from 'mdx-deck-theme-garlic'
 
 ### Frame
 
-**Props**
+#### Props
 
 ```js
 Frame.defaultProps = {
@@ -172,11 +164,9 @@ Frame.defaultProps = {
 }
 ```
 
-**Example**
+#### Example
 
 ```markdown
-import { Frame } from 'mdx-deck-theme-garlic'
-
 <Frame
   url="https://yarnpkg.com/en/package/mdx-deck-theme-garlic"
   loadingText="Loading..."

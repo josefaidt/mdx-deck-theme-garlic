@@ -1,16 +1,26 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+import { MDXProvider } from '@mdx-js/react'
 import { useThemeUI, ThemeProvider } from 'theme-ui'
 import Prism from '@theme-ui/prism'
 import { useDeck } from 'mdx-deck'
+import Contour from '../layouts/contour'
 import ProgressBar from './ProgressBar'
 import StyledIcon from './Icon.css'
+import CodeSandbox from './CodeSandbox'
+import Frame from './Frame'
 
 const components = {
   // eslint-disable-next-line react/display-name
   pre: ({ children }) => <>{children}</>,
   code: Prism,
+}
+
+const shortcodes = {
+  Contour,
+  CodeSandbox,
+  Frame,
 }
 
 const StyledTag = styled.a`
@@ -45,7 +55,7 @@ const Provider = props => {
         </StyledTag>
       ) : null}
       <ThemeProvider theme={theme} components={components}>
-        {children}
+        <MDXProvider components={shortcodes}>{children}</MDXProvider>
       </ThemeProvider>
       <ProgressBar percent={Math.floor((100 / (deck.length - 1)) * deck.index)} />
     </StyledLayout>
