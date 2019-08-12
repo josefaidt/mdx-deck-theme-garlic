@@ -9,7 +9,7 @@ const config = {
   authorUrl: 'https://josefaidt.dev/',
 }
 
-const wrapper = props => <Provider {...props} />
+const wrapper = props => <Provider {...props} {...config} />
 
 export default {
   ...theme,

@@ -13,8 +13,8 @@ const StyledLoader = styled.div`
     font-size: 0.6em;
   }
   .loader {
-    border: ${props => props.size / 8}em solid ${props => opacity(props.theme.default, 10)};
-    border-top: ${props => props.size / 8}em solid ${props => opacity(props.theme.default, 60)};
+    border: ${props => props.size / 8}em solid ${props => opacity(props.theme.colors.text, 10)};
+    border-top: ${props => props.size / 8}em solid ${props => opacity(props.theme.colors.text, 60)};
     filter: brightness(120%);
     border-radius: 50%;
     width: ${props => props.size}em;
@@ -37,7 +37,8 @@ const StyledLoader = styled.div`
 `
 
 const Loader = props => {
-  const theme = useThemeUI()
+  const { theme } = useThemeUI()
+  console.log(theme)
   return (
     <StyledLoader {...props} theme={theme}>
       <div className="loader" />
