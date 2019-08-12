@@ -5,7 +5,7 @@
   "repository": "https://github.com/josefaidt/mdx-deck-theme-garlic",
   "description": "garlic theme for mdx-deck",
   "private": false,
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
@@ -16,8 +16,8 @@
   "dependencies": {
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
-    "prop-types": "^15.7.2",
-    "@theme-ui/prism": "^0.2.29"
+    "@theme-ui/prism": "^0.2.29",
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "mdx-deck": "^3.0.9"
