@@ -40,7 +40,7 @@
       "eslint --fix",
       "git add"
     ],
-    "*.{md|mdx|json}": [
+    "*.{md,mdx,json}": [
       "prettier --write",
       "git add"
     ]
