@@ -1,10 +1,17 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { useThemeUI } from 'theme-ui'
+import { useThemeUI, ThemeProvider } from 'theme-ui'
+import Prism from '@theme-ui/prism'
 import { useDeck } from 'mdx-deck'
 import ProgressBar from './ProgressBar'
 import StyledIcon from './Icon.css'
+
+const components = {
+  // eslint-disable-next-line react/display-name
+  pre: ({ children }) => <>{children}</>,
+  code: Prism,
+}
 
 const StyledTag = styled.a`
   position: fixed;
@@ -42,7 +49,9 @@ const Provider = props => {
       ) : (
         <h1>Hello World</h1>
       )}
-      {children}
+      <ThemeProvider theme={theme} components={components}>
+        {children}
+      </ThemeProvider>
       <ProgressBar percent={Math.floor((100 / (deck.length - 1)) * deck.index)} />
     </StyledLayout>
   )

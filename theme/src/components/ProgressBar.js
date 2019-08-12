@@ -12,6 +12,7 @@ const StyledProgress = styled.div`
   z-index: 1;
   justify-content: center;
   div {
+    border-radius: 0.1rem;
     height: ${props => props.barHeight};
     position: relative;
     width: 60vw;
@@ -19,6 +20,7 @@ const StyledProgress = styled.div`
     filter: brightness(120%);
     span {
       display: block;
+      border-radius: 0.1rem;
       height: ${props => props.barHeight};
       width: ${props => (props.percent ? `${props.percent}%` : '0%')};
       background-color: ${({ theme }) => theme.colors.primary};

@@ -16,7 +16,8 @@
   "dependencies": {
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "@theme-ui/prism": "^0.2.29"
   },
   "devDependencies": {
     "mdx-deck": "^3.0.9"

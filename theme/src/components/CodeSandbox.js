@@ -8,7 +8,7 @@ const StyledSandbox = styled.iframe`
   height: 88vh;
   border: 0;
   z-index: 99;
-  border-radius: 1em;
+  border-radius: 0.7rem;
   overflow: hidden;
   display: ${props => (props.isLoading ? 'none' : 'block')};
 `
