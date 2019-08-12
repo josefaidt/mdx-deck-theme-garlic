@@ -30,9 +30,6 @@ export default {
     h3: {
       marginTop: 0,
     },
-    a: {
-      color: 'muted',
-    },
     pre: {
       ...prism,
       backgroundColor: 'muted',

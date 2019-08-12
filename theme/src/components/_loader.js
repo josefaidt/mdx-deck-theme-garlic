@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
-import colors from '../colors'
+import { useThemeUI } from 'theme-ui'
 import { opacity } from '../util'
 
 const StyledLoader = styled.div`
@@ -37,8 +37,9 @@ const StyledLoader = styled.div`
 `
 
 const Loader = props => {
+  const theme = useThemeUI()
   return (
-    <StyledLoader {...props} theme={colors}>
+    <StyledLoader {...props} theme={theme}>
       <div className="loader" />
       <p>{props.text}</p>
     </StyledLoader>

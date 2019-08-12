@@ -32,23 +32,18 @@ const Provider = props => {
   const { theme } = useThemeUI()
   const deck = useDeck()
   const { logo: Logo, logoUrl, author, authorUrl, children } = props
-  console.log(deck)
   return (
     <StyledLayout>
       {Logo && logoUrl ? (
         <StyledIcon href={logoUrl} target="_blank" theme={theme}>
           {Logo ? <Logo theme={theme} /> : null}
         </StyledIcon>
-      ) : (
-        <h1>Hello World</h1>
-      )}
+      ) : null}
       {author && authorUrl ? (
         <StyledTag href={authorUrl} target="_blank" theme={theme}>
           {author}
         </StyledTag>
-      ) : (
-        <h1>Hello World</h1>
-      )}
+      ) : null}
       <ThemeProvider theme={theme} components={components}>
         {children}
       </ThemeProvider>
@@ -66,9 +61,9 @@ Provider.propTypes = {
 
 Provider.defaultProps = {
   logo: null,
-  logoUrl: null,
+  logoUrl: '#',
   author: null,
-  authorUrl: null,
+  authorUrl: '#',
 }
 
 export default Provider

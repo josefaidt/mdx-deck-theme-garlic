@@ -6,7 +6,21 @@ Visit the [live demo](https://mdx-deck-theme-garlic.josefaidt.now.sh). SVG Desig
 
 ## Getting Started
 
-In your new mdx-deck project, create a `theme.js` file and paste the following sample code to override the default values:
+At the top of your `deck.mdx` file, import the theme and add to the `themes` array:
+
+```md
+import theme from 'mdx-deck-theme-garlic'
+
+export const themes = [
+  theme,
+]
+
+# My first slide
+```
+
+### To use Logo and Author
+
+In your new mdx-deck project, create a `theme.js` file, create a config object with your values (values not provided will not be rendered, therefore you can optionally use either logo, author, or both) as shown below:
 
 ```jsx
 // theme.js
@@ -14,7 +28,6 @@ import React from 'react'
 import theme, { Provider, GithubIcon } from 'mdx-deck-theme-garlic'
 
 const config = {
-  // eslint-disable-next-line react/display-name
   logo: () => <GithubIcon />,
   logoUrl: 'https://github.com/josefaidt/mdx-deck-theme-garlic',
   author: '@josefaidt',
@@ -31,7 +44,7 @@ export default {
 
 Import into your `deck.mdx` file:
 
-```mdx
+```md
 export { default as theme } from './theme'
 
 # My first slide

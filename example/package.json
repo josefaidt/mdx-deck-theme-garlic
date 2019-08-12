@@ -1,11 +1,11 @@
 {
   "name": "example",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.2.2",
   "license": "MIT",
   "scripts": {
     "start": "mdx-deck --no-open deck.mdx",
-    "now-build": "mdx-deck build -d public deck.mdx"
+    "build": "mdx-deck build -d public deck.mdx"
   },
   "devDependencies": {
     "mdx-deck": "^3.0.9",

@@ -4,7 +4,7 @@
   "repository": "https://github.com/josefaidt/mdx-deck-theme-garlic",
   "description": "garlic theme for mdx-deck",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "MIT",
   "scripts": {
     "start": "yarn workspace example run start",
@@ -23,7 +23,8 @@
   },
   "workspaces": [
     "theme",
-    "example"
+    "example",
+    "test"
   ],
   "eslintConfig": {
     "extends": "@josefaidt/eslint-config"
