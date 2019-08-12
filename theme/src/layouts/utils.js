@@ -11,9 +11,9 @@ export const generateViewWidth = (contentWidth, _reverse = false) => {
   }
 }
 
-export const generateViewHeight = (contentWidth, _reverse = false) => {
-  const textureWidth = 100 - contentWidth
-  const result = `${textureWidth}vh ${contentWidth}vh`
+export const generateViewHeight = (contentHeight, _reverse = false) => {
+  const textureHeight = 100 - contentHeight
+  const result = `${textureHeight}vh ${contentHeight}vh`
   if (!_reverse) {
     return result
   } else {

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
-import colors from '../colors'
+import { useThemeUI } from 'theme-ui'
 import { opacity } from '../util'
 
 const StyledLoader = styled.div`
@@ -13,8 +13,8 @@ const StyledLoader = styled.div`
     font-size: 0.6em;
   }
   .loader {
-    border: ${props => props.size / 8}em solid ${props => opacity(props.theme.default, 10)};
-    border-top: ${props => props.size / 8}em solid ${props => opacity(props.theme.default, 60)};
+    border: ${props => props.size / 8}em solid ${props => opacity(props.theme.colors.text, 10)};
+    border-top: ${props => props.size / 8}em solid ${props => opacity(props.theme.colors.text, 60)};
     filter: brightness(120%);
     border-radius: 50%;
     width: ${props => props.size}em;
@@ -37,8 +37,10 @@ const StyledLoader = styled.div`
 `
 
 const Loader = props => {
+  const { theme } = useThemeUI()
+  console.log(theme)
   return (
-    <StyledLoader {...props} theme={colors}>
+    <StyledLoader {...props} theme={theme}>
       <div className="loader" />
       <p>{props.text}</p>
     </StyledLoader>
