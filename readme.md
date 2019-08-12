@@ -22,9 +22,9 @@ export const themes = [
 
 All custom components from this theme are exported as named below as well as provided via MDX shortcodes, meaning you can use these components without importing them.
 
-- [Contour](#Contour): layout component
-- [CodeSandbox](#CodeSandbox)
-- [Frame](#Frame)
+- [Contour](#contour): layout component
+- [CodeSandbox](#codesandbox)
+- [Frame](#frame)
 
 ### To use Logo and Author
 
