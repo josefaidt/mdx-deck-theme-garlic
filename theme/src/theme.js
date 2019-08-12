@@ -9,9 +9,10 @@ export default {
     text: '#585159',
     background: '#F5F5EE',
     primary: '#A8595E',
-    secondary: '#DB805E',
+    secondary: '#EAA638',
     accent: '#8EB38C',
-    gray: '#585159',
+    muted: '#D6DEC84d',
+    gray: '#8EB38C',
   },
   googleFont: 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans',
   fonts: {
@@ -29,8 +30,13 @@ export default {
     h3: {
       marginTop: 0,
     },
+    a: {
+      color: 'muted',
+    },
     pre: {
       ...prism,
+      backgroundColor: 'muted',
+      borderRadius: '0.3rem',
       fontSize: '2.5rem',
     },
     quote: {
