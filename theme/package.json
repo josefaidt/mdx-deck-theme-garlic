@@ -8,6 +8,9 @@
   "version": "0.3.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
   "keywords": [
     "mdx-deck",
     "mdx",
@@ -20,7 +23,11 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "mdx-deck": "^3.0.9"
+    "mdx-deck": "^3.0.9",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/cli": "^7.5.5"
   },
   "peerDependencies": {
     "mdx-deck": "^3.0.9"
