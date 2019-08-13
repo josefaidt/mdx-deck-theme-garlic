@@ -1,0 +1,39 @@
+{
+  "name": "mdx-deck-theme-garlic",
+  "type": "module",
+  "author": "Josef Aidt <josef.aidt@gmail.com>",
+  "repository": "https://github.com/josefaidt/mdx-deck-theme-garlic",
+  "description": "garlic theme for mdx-deck",
+  "private": false,
+  "version": "0.3.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "keywords": [
+    "mdx-deck",
+    "mdx",
+    "theme"
+  ],
+  "dependencies": {
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15",
+    "@theme-ui/prism": "^0.2.29",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "mdx-deck": "^3.0.9",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/cli": "^7.5.5"
+  },
+  "peerDependencies": {
+    "mdx-deck": "^3.0.9"
+  },
+  "workspaces": [
+    "theme",
+    "example"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "example",
+  "private": true,
+  "version": "0.3.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck --no-open deck.mdx",
+    "build": "mdx-deck build -d public deck.mdx"
+  },
+  "devDependencies": {
+    "mdx-deck": "^3.0.9",
+    "mdx-deck-theme-garlic": "*"
+  }
+}

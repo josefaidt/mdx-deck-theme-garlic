@@ -1,6 +1,6 @@
-import { Head, Appear } from '@mdx-deck/components'
-import { Invert } from 'mdx-deck/layouts'
-import theme, { Contour, CodeSandbox, Frame } from '../index'
+import { Head, Appear } from 'mdx-deck'
+import { Invert } from 'mdx-deck'
+import theme from './theme'
 
 export const themes = [
   theme,
@@ -22,8 +22,6 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 # Contour
 
 ```jsx
-import { Contour } from 'mdx-deck-theme-garlic'
-
 <Contour>
 
   # Contour
@@ -40,8 +38,6 @@ import { Contour } from 'mdx-deck-theme-garlic'
 # Contour Invert
 
 ```jsx
-import { Contour } from 'mdx-deck-theme-garlic'
-
 <Contour invert>
 
   # Contour Invert
@@ -58,8 +54,6 @@ import { Contour } from 'mdx-deck-theme-garlic'
 # Contour Custom Width
 
 ```jsx
-import { Contour } from 'mdx-deck-theme-garlic'
-
 <Contour contentWidth={90}>
 
   # Contour Custom Width
@@ -76,8 +70,6 @@ import { Contour } from 'mdx-deck-theme-garlic'
 # CodeSandbox iFrame
 
 ```js
-import { CodeSandbox } from 'mdx-deck-theme-garlic'
-
 <CodeSandbox 
   url="https://codesandbox.io/embed/new"
 />
@@ -96,8 +88,6 @@ import { CodeSandbox } from 'mdx-deck-theme-garlic'
 # Frame
 
 ```js
-import { Frame } from 'mdx-deck-theme-garlic'
-
 <Frame loadingText="Loading..." />
 ```
 

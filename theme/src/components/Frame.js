@@ -7,7 +7,7 @@ const StylediFrame = styled.iframe`
   width: 85vw;
   height: 85vh;
   border: 0;
-  border-radius: 1em;
+  border-radius: 0.7rem;
   overflow: hidden;
   display: ${props => (props.isLoading ? 'none' : 'block')};
 `
