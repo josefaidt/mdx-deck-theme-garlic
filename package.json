@@ -18,6 +18,8 @@
     "@josefaidt/eslint-config": "^0.1.9",
     "@josefaidt/prettier-config": "^0.0.2",
     "eslint": "^6.1.0",
+    "husky": "^3.0.3",
+    "lint-staged": "^9.2.1",
     "prettier": "^1.18.2"
   },
   "workspaces": [
