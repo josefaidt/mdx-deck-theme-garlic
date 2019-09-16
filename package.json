@@ -6,8 +6,11 @@
   "version": "0.3.1",
   "license": "MIT",
   "scripts": {
-    "start": "yarn workspace example run start",
-    "build": "yarn workspace example run build"
+    "start": "yarn workspace mdx-deck-theme-garlic run build; yarn workspace example run start",
+    "deploy": "yarn build:example; now",
+    "build:example": "yarn workspace example run build",
+    "build:lib": "yarn workspace mdx-deck-theme-garlic run build",
+    "reload": "rm -rf node_modules **/node_modules; yarn install"
   },
   "keywords": [
     "mdx-deck",
