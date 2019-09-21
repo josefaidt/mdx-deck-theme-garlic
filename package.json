@@ -3,14 +3,15 @@
   "repository": "https://github.com/josefaidt/mdx-deck-theme-garlic",
   "description": "garlic theme for mdx-deck",
   "private": true,
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "MIT",
   "scripts": {
     "start": "yarn workspace mdx-deck-theme-garlic run build; yarn workspace example run start",
     "deploy": "yarn build:example; now",
     "build:example": "yarn workspace example run build",
     "build:lib": "yarn workspace mdx-deck-theme-garlic run build",
-    "reload": "rm -rf node_modules **/node_modules; yarn install"
+    "reload": "rm -rf node_modules **/node_modules; yarn install",
+    "lock": "node scripts/vlock.js"
   },
   "keywords": [
     "mdx-deck",
@@ -36,7 +37,7 @@
   "prettier": "@josefaidt/prettier-config",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn lock && lint-staged"
     }
   },
   "lint-staged": {
