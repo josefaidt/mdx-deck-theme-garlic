@@ -1,15 +1,11 @@
-import { Head, Appear } from 'mdx-deck'
-import { Invert } from 'mdx-deck'
+import { Head } from 'mdx-deck'
 import theme from './theme'
 
-export const themes = [
-  theme,
-]
+export const themes = [theme]
 
 <Head>
   <title>mdx-deck theme: garlic</title>
 </Head>
-
 
 # mdx-deck garlic theme
 
@@ -21,11 +17,11 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 
 # Contour
 
-```jsx
+```md
 <Contour>
-
-  # Contour
   
+# Contour
+
 </Contour>
 ```
 
@@ -37,10 +33,26 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 
 # Contour Invert
 
-```jsx
+```md
 <Contour invert>
+  
+# Contour Invert
 
-  # Contour Invert
+</Contour>
+```
+
+</Contour>
+
+---
+
+<Contour framed>
+
+# Contour framed
+
+```md
+<Contour framed>
+  
+# Contour Framed
 
 </Contour>
 ```
@@ -53,10 +65,10 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 
 # Contour Custom Width
 
-```jsx
+```md
 <Contour contentWidth={90}>
-
-  # Contour Custom Width
+  
+# Contour Custom Width
 
 </Contour>
 ```
@@ -69,10 +81,8 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 
 # CodeSandbox iFrame
 
-```js
-<CodeSandbox 
-  url="https://codesandbox.io/embed/new"
-/>
+```jsx
+<CodeSandbox url="https://codesandbox.io/embed/new" />
 ```
 
 </Contour>
@@ -87,7 +97,7 @@ visit the [repo](https://github.com/josefaidt/mdx-deck-theme-garlic)
 
 # Frame
 
-```js
+```jsx
 <Frame loadingText="Loading..." />
 ```
 

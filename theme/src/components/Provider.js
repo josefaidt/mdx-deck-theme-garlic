@@ -10,6 +10,7 @@ import ProgressBar from './ProgressBar'
 import StyledIcon from './Icon.css'
 import CodeSandbox from './CodeSandbox'
 import Frame from './Frame'
+import Column from './Column'
 
 const components = {
   // eslint-disable-next-line react/display-name
@@ -21,6 +22,7 @@ const shortcodes = {
   Contour,
   CodeSandbox,
   Frame,
+  Column,
 }
 
 const StyledTag = styled.a`
