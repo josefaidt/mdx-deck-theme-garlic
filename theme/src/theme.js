@@ -12,7 +12,7 @@ export default {
     secondary: '#EAA638',
     accent: '#8EB38C',
     muted: '#D6DEC84d',
-    gray: '#8EB38C',
+    gray: '#728C85',
   },
   googleFont: 'https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans',
   fonts: {
