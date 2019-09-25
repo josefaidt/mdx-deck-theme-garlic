@@ -3,7 +3,7 @@
   "repository": "https://github.com/josefaidt/mdx-deck-theme-garlic",
   "description": "garlic theme for mdx-deck",
   "private": true,
-  "version": "0.3.3",
+  "version": "0.3.4",
   "license": "MIT",
   "scripts": {
     "start": "yarn workspace mdx-deck-theme-garlic run build; yarn workspace example run start",
