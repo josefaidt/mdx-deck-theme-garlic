@@ -45,6 +45,8 @@ const StyledLayout = styled(StyledContour)`
       justify-content: center;
       .content {
         flex: 1;
+        justify-content: center;
+        align-items: center;
         background-color: ${props => props.theme.colors.background};
         margin: 3.5rem;
         padding: 4rem;

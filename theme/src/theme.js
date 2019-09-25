@@ -36,7 +36,10 @@ export default {
       borderRadius: '0.3rem',
       fontSize: '2.5rem',
     },
-    quote: {
+    blockquote: {
+      marginTop: 0,
+      marginBottom: 0,
+      fontWeight: 'normal',
       fontStyle: 'italic',
     },
   },
